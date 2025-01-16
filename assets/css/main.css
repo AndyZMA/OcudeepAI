@@ -17122,3 +17122,8 @@ body .ui-tooltip {
   max-width: 250px !important;
   max-height: none !important;
 }
+
+.round-image {
+  border-radius: 50%; /* Hace la imagen redonda */
+  object-fit: cover; /* Ajusta la imagen al contenedor circular */
+}

@@ -55,3 +55,51 @@
 }
 
 
+/* Estilos Generales */
+.banner__media {
+    position: relative;
+    overflow: hidden; /* Evita que algo se desborde fuera del contenedor */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100%;
+    height: auto; /* Deja que el contenedor ajuste su altura dinámicamente */
+}
+
+.banner-image {
+    width: 100%; /* La imagen ocupa todo el ancho disponible */
+    max-height: 400px; /* Define una altura máxima para evitar que sea demasiado grande */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Se ajusta al contenedor sin recortarse */
+    padding-left: 0; /* Elimina el padding en todos los dispositivos */
+    transform: none; /* Elimina cualquier transformación */
+}
+
+/* Estilos para Dispositivos Móviles */
+@media (max-width: 768px) {
+    .banner__media {
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .banner-image {
+        width: 90%; /* La imagen ocupa el 90% del ancho del contenedor */
+        max-height: 250px; /* Altura máxima específica para móviles */
+        margin: 0 auto; /* Centra la imagen dentro del contenedor */
+    }
+}
+
+/* Estilos para Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .banner-image {
+        width: 100%; /* Asegura que la imagen ocupe el ancho completo */
+        max-height: 300px; /* Altura máxima más grande que en móvil */
+    }
+}
+
+/* Estilos para Pantallas Grandes */
+@media (min-width: 1025px) {
+    .banner-image {
+        width: 100%; /* Imagen ocupa todo el ancho */
+        max-height: 500px; /* Define una altura máxima específica para pantallas grandes */
+    }
+}
